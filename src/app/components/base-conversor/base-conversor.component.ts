@@ -14,7 +14,8 @@ export class BaseConversorComponent  implements OnInit {
   valor_enviado: string = '';
   valor_recebido: string | number = '';
 
-  valor_compra: any = "";
+  conversao_compra: any = "";
+
 
   constructor(private apiData: ApiDataService) { }
 
@@ -22,19 +23,15 @@ export class BaseConversorComponent  implements OnInit {
     this.apiData.atualizarValor({valor: this.valor_enviado})
   }
 
+  fazerRequisicao(){
+    this.apiData.getConversao().subscribe((data:any) => {
 
-  ngOnInit() {
+      this.conversao_compra = parseFloat(data.USDBRL.bid);
+      this.valor_recebido = (this.conversao_compra * parseFloat(this.valor_enviado)).toFixed(2);
 
-    this.apiData.getConversao().subscribe((data) => {
-      this.valor_compra = data;
-      console.log(this.valor_compra.USDBRL.bid);
     })
-
-
-    this.apiData.valorAtual.subscribe(valor => {
-      this.valor_recebido = (parseFloat(valor.valor) * parseFloat(this.valor_compra.USDBRL.bid)).toFixed(2);
-    })
-
   }
+
+  ngOnInit() {}
 
 }
