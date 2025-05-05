@@ -1,0 +1,23 @@
+<div id="background">
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>Insira o valor</ion-card-title>
+    </ion-card-header>
+
+    <ion-item>
+      <ion-label position="stacked">Real</ion-label>
+      <ion-input type="text" [(ngModel)]="valor_enviado"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Dólar</ion-label>
+      <ion-input type="email" value={{valor_recebido}}></ion-input>
+    </ion-item>
+
+    <ion-button (click)="enviarValor()">Enviar</ion-button>
+
+  </ion-card>
+
+</div>

@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Comunicação entre Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+
+  <div id="menu_arrows">
+    <img src="../../assets/arrows/arrow.png" class="arrow" id="left" (click)="irParaHome()">
+    <img src="../../assets/arrows/arrow.png" class="arrow" id="right" (click)="irParaConversor()">
+  </div>
+  <app-input-component></app-input-component>
+  <app-output-component></app-output-component>
+
+</ion-content>
+
+

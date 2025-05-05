@@ -1,0 +1,7 @@
+{
+  "name": "FormadoraII",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

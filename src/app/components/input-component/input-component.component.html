@@ -1,0 +1,23 @@
+<div id="background">
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>Insira suas Credenciais</ion-card-title>
+    </ion-card-header>
+
+    <ion-item>
+      <ion-label position="stacked">Nome:</ion-label>
+      <ion-input type="text" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Email:</ion-label>
+      <ion-input type="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="enviarDados()">Enviar</ion-button>
+
+  </ion-card>
+
+</div>
